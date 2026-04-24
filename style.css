@@ -1,0 +1,301 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  color: black;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.nav-list li a:hover {
+  transform: translateY(-3px);
+  color: #00bcd4;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-left { width: 50%; }
+.hero-right { width: 50%; text-align: center; }
+
+.profile-pic {
+  width: 250px;
+  border-radius: 20%;   /* makes it circular */
+  border: 4px solid white;
+  transition: 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00c6ff;
+}
+
+/* ================= NAME ANIMATION ================= */
+.main-name {
+  font-size: 36px;
+  font-weight: bold;
+  animation: fadeSlide 1s ease-in;
+}
+
+@keyframes fadeSlide {
+  from {opacity:0; transform:translateX(-30px);}
+  to {opacity:1; transform:translateX(0);}
+}
+
+/* ================= BUTTONS (UPDATED PREMIUM) ================= */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+  color: white;
+}
+
+/* View Button */
+.view-btn {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+.view-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Download Button */
+.download-btn {
+  background: linear-gradient(45deg, #00ff9d, #00c853);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Icon Animation */
+.btn i {
+  transition: 0.3s;
+}
+
+.download-btn:hover i {
+  transform: translateY(3px);
+}
+
+.view-btn:hover i {
+  transform: scale(1.2);
+}
+
+/* ================= SLIDER ================= */
+.slider { overflow: hidden; margin-top:20px; }
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+.slide-track span { margin-right:40px; }
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ================= SECTION ================= */
+.section {
+  text-align: center;
+  padding: 40px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100px;
+  transition: 0.3s;
+}
+/* ================= SKILL ICON COLORS ================= */
+.html { color: #e34c26; }
+.css { color: #264de4; }
+.js { color: #f0db4f; }
+.python { color: #306998; }
+.sql { color: #f29111; }
+.excel { color: #217346; }
+
+.skill-card i { font-size: 35px; }
+
+.skill-card:hover { transform: scale(1.15); }
+
+/* ================= CARDS ================= */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 700px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* ================= PROJECT DETAILS ================= */
+.details-box {
+  display: none;
+  background: white;
+  color: black;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+}
+
+/* ================= PROJECT IMAGES ================= */
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-images div {
+  width: 45%;
+  text-align: center;
+}
+
+.project-images img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: white;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= CONTACT ================= */
+.contact-box {
+  width: 400px;
+  margin: auto;
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* ================= ANIMATION ================= */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-left, .hero-right { width: 100%; }
+
+  .project-images div {
+    width: 100%;
+  }
+
+  .contact-box {
+    width: 90%;
+  }
+}
